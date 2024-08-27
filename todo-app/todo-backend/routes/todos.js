@@ -15,7 +15,11 @@ router.post('/', async (req, res) => {
     text: req.body.text,
     done: false
   })
-  const redisValue = await redis.getAsync('added_todos')
+  let redisValue = await redis.getAsync('added_todos')
+  if (redisValue === null || redisValue === "NaN") {
+    await redis.setAsync('added_todos', 0)
+    redisValue = await redis.getAsync('added_todos')
+  }
   const addedValue = parseInt(redisValue) + 1
   await redis.setAsync('added_todos', addedValue)
   console.log(await redis.getAsync('added_todos'))
