@@ -8,6 +8,8 @@ COPY . .
 
 RUN npm ci
 
+RUN npm run test
+
 RUN npm run build
 
 # ---
