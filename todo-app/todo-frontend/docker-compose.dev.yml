@@ -1,6 +1,6 @@
 services:
   app:
-    image: hello-front-dev
+    image: todo-front-dev
     build:
       context: .
       dockerfile: dev.Dockerfile
@@ -8,6 +8,6 @@ services:
       - ./:/usr/src/app
     ports:
       - 3210:5173
-    container_name: hello-front-dev
+    container_name: todo-front-dev
   debug-helper:
     image: busybox
