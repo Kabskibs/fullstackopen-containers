@@ -1,0 +1,6 @@
+services:
+  app:
+    image: todo-frontend
+    build: .
+    ports:
+      - 3210:5173
