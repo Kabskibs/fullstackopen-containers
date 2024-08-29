@@ -1,0 +1,27 @@
+.notificationSuccess {
+    color: green;
+    background: lightgray;
+    font-size: 20px;
+    border-style: solid;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.notificationError {
+    color: red;
+    background: lightgray;
+    font-size: 20px;
+    border-style: solid;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.blogPostBox {
+    padding-top: 10px;
+    padding-left: 5px;
+    border: solid;
+    border-width: 1px;
+    margin-bottom: 5px;
+}

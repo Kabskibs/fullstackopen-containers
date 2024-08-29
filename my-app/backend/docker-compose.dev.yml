@@ -1,0 +1,13 @@
+services:
+  backend:
+    image: bloglist-backend
+    build:
+      context: .
+      dockerfile: dev.Dockerfile
+    volumes:
+      - ./:/usr/src/app
+    ports:
+      - 3003:3003
+    env_file:
+      - .env
+    container_name: bloglist-backend-dev
