@@ -1,15 +1,13 @@
 services:
   frontend:
     environment:
-      - VITE_BACKEND_URL=http://localhost:3003
+      - VITE_BACKEND_URL=http://localhost:8080
     image: bloglist-frontend
     build:
       context: ./frontend
       dockerfile: dev.Dockerfile
     volumes:
       - ./frontend:/usr/src/app
-    ports:
-      - 5173:5173
     container_name: bloglist-frontend-dev
     depends_on:
       - backend
@@ -21,8 +19,6 @@ services:
       dockerfile: dev.Dockerfile
     volumes:
       - ./backend:/usr/src/app
-    ports:
-     - 3003:3003
     env_file:
       - ./backend/.env
     container_name: bloglist-backend-dev
